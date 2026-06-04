@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            align-items: center;
+            margin-top: 80px;
+        }
+        .game-board {
+            background-color: white;
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-board">
+        <h2>Clicking Game</h2>
+        <p>Clicks:</p>
+        <div class="score-display" id="score">0</div>
+        <button class="button-click" onclick="click()">Click!</button>
+    </div>
+
+    <script>
+        let currentScore = 0;
+        function click() {
+            currentScore = currentScore + 1;
+            document.getElementById('score').innerText = currentScore;
+        }
+    </script>
+</body>
